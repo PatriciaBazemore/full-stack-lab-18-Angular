@@ -1,0 +1,25 @@
+<div id='chirpbox' class="chirp-box">  
+    <select id="userselectbtn">
+        <option value="">Select a User</option>
+        <option ng-repeat="user in users" value="{{ user.id }}">{{ user.name }}</option>
+    </select> 
+                         
+    <input type="text" id="chirpfield" chirp="div" placeholder="Chirp here!">
+    
+    <button class="fancy-button" id="chirpbtn" disabled>Chirp!</button>
+            
+</div>
+       
+<div class="chirps_list">
+    <div class="chirp" ng-repeat="chirp in chirps">
+        <a ng-href="/#!/chirps/{{ chirp.id }}">
+            <h3>{{ chirp.message }}</h3>
+            <h5>{{ chirp.userName }}</h5>
+        </a>
+    </div>
+</div>
+        
+    
+
+
+       
